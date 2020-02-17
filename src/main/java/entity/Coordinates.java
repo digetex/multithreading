@@ -2,6 +2,8 @@ package entity;
 
 import Interface.ICoordinates;
 
+import java.awt.*;
+
 public class Coordinates implements ICoordinates {
     private int x;
     private int y;
@@ -17,9 +19,14 @@ public class Coordinates implements ICoordinates {
         this.width = width;
     }
 
-    // возможно переписать логику, пока не понятно как получим результат
+    /*// возможно переписать логику, пока не понятно как получим результат
     public Coordinates GetCordinats(int x, int y, int oppositeX, int oppositeY) {
         return new Coordinates(x, y, oppositeX - x, oppositeY - y);
+    }*/
+
+    public Rectangle GetRectangle()
+    {
+       return new Rectangle(this.x, this.y,this.width,this.height);
     }
 
     public int getX() {
@@ -48,7 +55,7 @@ public class Coordinates implements ICoordinates {
 
     @Override
     public String toString() {
-        return "Cordinats{" +
+        return "Coordinates{" +
                 "x=" + x +
                 ", y=" + y +
                 ", height=" + height +
