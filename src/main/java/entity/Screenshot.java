@@ -1,6 +1,5 @@
 package entity;
 
-import Interface.ICoordinates;
 import Interface.IImage;
 
 import java.awt.*;
@@ -26,9 +25,9 @@ public class Screenshot implements IImage {
         this.image = null;
     }
 
-    public Screenshot(ICoordinates coordinates) {
+    public Screenshot(Rectangle rectangle) {
         try {
-            this.image = new Robot().createScreenCapture(new Rectangle(coordinates.));
+            this.image = new Robot().createScreenCapture(rectangle);
         } catch (SecurityException e) {
         } catch (AWTException e) {
         }
