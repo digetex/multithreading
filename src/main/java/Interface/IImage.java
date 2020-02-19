@@ -3,5 +3,6 @@ package Interface;
 import java.awt.image.BufferedImage;
 
 public interface IImage {
-    void CreateMatrixImage(BufferedImage image);
+    public BufferedImage getImage();
+    public int[][] getMatrixImage();
 }
